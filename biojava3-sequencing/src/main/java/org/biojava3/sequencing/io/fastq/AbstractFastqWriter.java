@@ -69,14 +69,7 @@ abstract class AbstractFastqWriter
             validate(f);
             if (f != null)
             {
-                appendable.append("@");
-                appendable.append(f.getDescription());
-                appendable.append("\n");
-                appendable.append(f.getSequence());
-                appendable.append("\n");
-                appendable.append("+\n");
-                appendable.append(f.getQuality());
-                appendable.append("\n");
+                appendable.append(f.toString());
             }
         }
         return appendable;

@@ -120,4 +120,21 @@ public final class Fastq
     {
         return variant;
     }
+    
+    /**
+     * {@inheritDoc}
+     */
+    @Override
+    public String toString() 
+    {
+        StringBuilder appendable = new StringBuilder("@");
+        appendable.append(this.getDescription());
+        appendable.append("\n");
+        appendable.append(this.getSequence());
+        appendable.append("\n+\n");
+        appendable.append(this.getQuality());
+        appendable.append("\n");
+        
+        return appendable.toString();
+    }
 }
